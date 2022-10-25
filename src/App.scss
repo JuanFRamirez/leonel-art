@@ -100,7 +100,6 @@ body {
   color: #fff;
   margin: 0rem 2rem;
   float: left;
-  width: 100%;
 }
 .value-container {
   display: flex;
@@ -207,12 +206,32 @@ ul {
     margin: auto;
     gap: 0.5rem;
     align-items: center;
+    justify-items: center;
+    padding: 2rem;
     img {
       width: 93%;
       height: 93%;
       object-fit: cover;
       border-radius: 0.5rem;
     }
+  }
+  .light-box{
+    position: absolute;
+      z-index: 999;
+      width: 80%;
+      background: #1f2021b8;
+      top: 0;
+      left: 0;
+      padding: 5rem;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+        margin: 3rem;
+        width: 1000px;
+        height: auto;
+      }
   }
 }
 

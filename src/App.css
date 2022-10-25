@@ -135,7 +135,6 @@ body {
   color: #fff;
   margin: 0rem 2rem;
   float: left;
-  width: 100%;
 }
 
 .value-container {
@@ -304,6 +303,8 @@ ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
+  padding: 2rem;
 }
 
 .gallery .image-container img {
@@ -312,6 +313,33 @@ ul li a {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.5rem;
+}
+
+.gallery .light-box {
+  position: absolute;
+  z-index: 999;
+  width: 80%;
+  background: #1f2021b8;
+  top: 0;
+  left: 0;
+  padding: 5rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery .light-box img {
+  margin: 3rem;
+  width: 1000px;
+  height: auto;
 }
 
 @-webkit-keyframes blink {

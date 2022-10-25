@@ -1,8 +1,7 @@
 import React from "react";
 import { useLayoutEffect } from "react";
-import { uuid } from "react-uuid";
 import BigTitle from "../Components/BigTitle";
-import { images } from "../Components/Images";
+import GalleryComponent from "../Components/GalleryComponent";
 const Gallery = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -18,11 +17,7 @@ const Gallery = () => {
         voluptate amet labore velit. Velit commodo pariatur consectetur esse.
       </p>
       <br />
-      <div className="image-container">
-        {images.map((image) => (
-          <img key={uuid} src={`../imgs/${image}`} alt={`${image}`} />
-        ))}
-      </div>
+      <GalleryComponent/>
     </div>
   );
 };
