@@ -199,6 +199,7 @@ ul {
 .gallery {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   .image-container {
     display: grid;
@@ -216,21 +217,34 @@ ul {
     }
   }
   .light-box{
-    position: absolute;
+    position: fixed;
       z-index: 999;
-      width: 80%;
+      width: 100%;
       background: #1f2021b8;
-      top: 0;
+      top: -2rem;
       left: 0;
-      padding: 5rem;
+      bottom: 0;
+      right: 0;
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100%;
+      justify-content: center;
       img{
-        margin: 3rem;
-        width: 1000px;
+        width: 25rem;
         height: auto;
+        margin-bottom: 2rem;
+      }
+      p{
+        font-weight: 400;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 5rem;
+        top: 5rem;
+        &:hover{
+          cursor: pointer;
+        }
       }
   }
 }

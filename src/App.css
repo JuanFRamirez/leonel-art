@@ -291,6 +291,7 @@ ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .gallery .image-container {
@@ -316,13 +317,14 @@ ul li a {
 }
 
 .gallery .light-box {
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  width: 80%;
+  width: 100%;
   background: #1f2021b8;
-  top: 0;
+  top: -2rem;
   left: 0;
-  padding: 5rem;
+  bottom: 0;
+  right: 0;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,12 +336,28 @@ ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gallery .light-box img {
-  margin: 3rem;
-  width: 1000px;
+  width: 25rem;
   height: auto;
+  margin-bottom: 2rem;
+}
+
+.gallery .light-box p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+}
+
+.gallery .light-box p:hover {
+  cursor: pointer;
 }
 
 @-webkit-keyframes blink {

@@ -2,16 +2,17 @@ import React from "react";
 import { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu";
-
-import About from "./pages/About";
-import "./App.css";
 import Loader from "./Components/Loader";
-import Gallery from "./pages/Gallery";
+import "./App.css";
 const MainPageContainer = React.lazy(() => {
   return new Promise((resolve) =>
     setTimeout(() => resolve(import("./Components/MainPageContainer")), 1200)
   ).then();
 });
+
+const About = React.lazy(() => import("./pages/About"));
+const Gallery = React.lazy(() => import("./pages/Gallery"));
+const Contacts = React.lazy(() => import("./pages/Contacts"));
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<MainPageContainer />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contacts />} />
         </Routes>
       </BrowserRouter>
     </Suspense>

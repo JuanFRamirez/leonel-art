@@ -3,6 +3,7 @@ import { images } from "./Images";
 
 import { uuid } from "react-uuid";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { BsDoorOpen } from "react-icons/bs";
 const GalleryComponent = () => {
   const [popUp, setPopup] = useState("");
   return (
@@ -19,9 +20,14 @@ const GalleryComponent = () => {
         />
       ))}
       {popUp ? (
-        <div className="light-box">
+        <div className="light-box" onClick={() => setPopup("")}>
           <img src={`../imgs/${popUp}`} alt={`${popUp}`} />
-          <span>link</span><span onClick={()=>setPopup("")}>X</span>
+          <p onClick={() => setPopup("")}>
+            Cerrar{" "}
+            <span>
+              <BsDoorOpen />
+            </span>
+          </p>
         </div>
       ) : (
         ""
