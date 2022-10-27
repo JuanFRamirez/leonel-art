@@ -8,10 +8,8 @@ const Loader = () => {
   }, []);
   const generateRandomImage = () => {
     let randomNumber = Math.floor(Math.random() * images.length);
-    console.log(randomNumber);
     setImage(images[randomNumber]);
   };
-  console.log(image);
   return (
     <div className="loading-screen">
       <img
