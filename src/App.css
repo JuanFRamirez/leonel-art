@@ -25,6 +25,15 @@ body {
   height: 100vh;
 }
 
+.mn .rotating-logo {
+  width: 200px;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  -webkit-animation: rotation 6s linear infinite;
+          animation: rotation 6s linear infinite;
+}
+
 .intro-title {
   color: #fff;
   font-size: 5rem;
@@ -230,6 +239,22 @@ ul li a {
   margin: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+}
+
+.about .container-1 .sub .reveal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  margin-top: 5rem;
+  -webkit-transform: translate(0%, 0);
+          transform: translate(0%, 0);
+  -webkit-animation: slide-right .7s 1.3s ease-in forwards;
+          animation: slide-right .7s 1.3s ease-in forwards;
 }
 
 .about .eye-container {
@@ -460,6 +485,52 @@ ul li a {
   0%,
   5% {
     height: 0rem;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  100% {
+    display: none;
+    -webkit-transform: translate(-100%, 0%);
+            transform: translate(-100%, 0%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  100% {
+    display: none;
+    -webkit-transform: translate(-100%, 0%);
+            transform: translate(-100%, 0%);
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=App.css.map */

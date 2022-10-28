@@ -42,8 +42,6 @@ const ContactForm = () => {
         form.message.trim().length > 0
       ) {
         setIsDisabled(false);
-      } else {
-        setIsDisabled(true);
       }
     }, 100);
   };

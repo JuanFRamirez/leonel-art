@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import uuid from "react-uuid";
 import UseMenu from "../hooks/useMenu";
 const Eye = () => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -22,7 +21,7 @@ const Eye = () => {
   return (
     <div className="eye-socket">
       {menu?.map((item, index) => (
-        <li className="menu" key={uuid} style={{ "--i": index }}>
+        <li className="menu" key={index} style={{ "--i": index }}>
           {item.title}
         </li>
       ))}

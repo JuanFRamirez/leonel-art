@@ -17,6 +17,7 @@ const MainPageContainer = () => {
           "value-text animate__animated animate__fadeInUp"
         }
       />
+      <img src="../imgs/caption.png" alt="rotating logo" className="rotating-logo"/>
     </div>
   );
 };

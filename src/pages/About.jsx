@@ -24,10 +24,13 @@ const About = () => {
               "Enim tempor esse aute elit adipisicing deserunt consectetur excepteur amet voluptate duis pariatur. Proident adipisicing proident officia sint duis. Do ipsum nisi velit qui laborum non sint velit dolor. Culpa dolor dolore aliqua in amet quis nulla velit. Sit voluptate eu sint Lorem non commodo."
             }
             children={
-              <img
-                src="../imgs/old2.jpg"
-                alt="hand drawn old man face on a gray scale"
-              />
+              <>
+                <img
+                  src="../imgs/old2.jpg"
+                  alt="hand drawn old man face on a gray scale"
+                />
+                <div className="reveal"></div>
+              </>
             }
           />
           <div style={{ position: "relative", overflow: "hidden" }}>
