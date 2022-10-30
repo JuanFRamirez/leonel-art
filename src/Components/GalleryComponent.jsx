@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { images } from "./Images";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsDoorOpen } from "react-icons/bs";
+import { useGallery } from "../hooks/useGallery";
 const GalleryComponent = () => {
   const [popUp, setPopup] = useState("");
+  const images = useGallery();
   return (
     <div className="image-container">
-      {images.map((image,index) => (
+      {images && images.map((image,index) => (
         <LazyLoadImage
           key={index}
           src={`../imgs/${image}`}

@@ -6,7 +6,7 @@ import Loader from "./Components/Loader";
 import "./App.css";
 const MainPageContainer = React.lazy(() => {
   return new Promise((resolve) =>
-    setTimeout(() => resolve(import("./Components/MainPageContainer")), 1200)
+    setTimeout(() => resolve(import("./pages/MainPageContainer")), 1200)
   ).then();
 });
 

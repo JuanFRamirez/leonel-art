@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import Subtitle from "./Subtitle";
+import axios from "axios";
 const ContactForm = () => {
   const [form, setForm] = useState({
     name: "",
@@ -11,19 +12,30 @@ const ContactForm = () => {
   const [error, setError] = useState(true);
   const [isDisabled, setIsDisabled] = useState(true);
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    try {
-      if (validateEmail(form.email) !== null) {
-        setError(false);
+    if (validateEmail(form.email) !== null) {
+      setError(false);
+      try {
+         axios.post("http://localhost:5000/contacts", form).then((res) => {
+          if (res.data) {
+            Swal.fire({
+              icon: "success",
+              title: "Mensaje enviado",
+              text: "Su mensaje ha sido enviado, gracias",
+            });
+            console.log(res.data)
+            return res
+          }
+        });
+      } catch (e) {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Algunos campos presentan problemas o estan vacios, por favor verifiquelos e intente otra vez",
+        });
+        console.log(e.message);
       }
-    } catch (e) {
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "Algunos campos presentan problemas o estan vacios, por favor verifiquelos e intente otra vez",
-      });
-      console.log(e.message);
     }
   };
   const validateEmail = (email) => {
@@ -47,7 +59,7 @@ const ContactForm = () => {
   };
   return (
     <div className="contact">
-      <Subtitle text={"Envia un mensaje"}/>
+      <Subtitle text={"Envia un mensaje"} />
       <form onSubmit={submitHandler}>
         nombre:
         <input type="text" name="name" onChange={formHandler} required={true} />

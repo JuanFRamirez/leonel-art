@@ -1,6 +1,6 @@
-import BigTitle from "./BigTitle";
-import Widget from "./Widget";
-import Value from "./Value";
+import BigTitle from "../Components/BigTitle";
+import Widget from "../Components/Widget";
+import Value from "../Components/Value";
 const MainPageContainer = () => {
   return (
     <div className="mn">
