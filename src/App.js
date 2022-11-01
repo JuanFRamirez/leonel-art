@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu";
 import Loader from "./Components/Loader";
 import "./App.css";
+import PageNotFound from "./pages/PageNotFound";
 const MainPageContainer = React.lazy(() => {
   return new Promise((resolve) =>
     setTimeout(() => resolve(import("./pages/MainPageContainer")), 1200)
@@ -31,6 +32,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contacts />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
