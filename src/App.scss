@@ -15,12 +15,12 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  .rotating-logo{
+  .rotating-logo {
     width: 200px;
     position: absolute;
     bottom: 10%;
     right: 5%;
-animation: rotation 6s linear infinite;
+    animation: rotation 6s linear infinite;
   }
 }
 .intro-title {
@@ -165,10 +165,16 @@ ul {
       display: flex;
       width: 100%;
       img {
-        width: 100%;
         margin: auto;
         object-fit: cover;
         position: relative;
+      }
+      .image__portrait {
+        filter: grayscale(1);
+        width: 80%;
+      }
+      .image__side_image {
+        width: 100%;
       }
       .reveal {
         position: absolute;
@@ -180,7 +186,7 @@ ul {
         top: 0;
         margin-top: 5rem;
         transform: translate(0%, 0);
-        animation: slide-right .7s 1.3s ease-in forwards;
+        animation: slide-right 0.7s 1.3s ease-in forwards;
       }
     }
   }
@@ -223,7 +229,7 @@ ul {
 
   .image-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 0rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: auto;
     gap: 0.5rem;
     align-items: center;
@@ -341,11 +347,20 @@ ul {
   }
 }
 
-@keyframes rotation{
-  from{
+@keyframes rotation {
+  from {
     transform: rotate(0deg);
   }
-  to{
+  to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .two-side,.sub {
+    flex-wrap: wrap;
+    .contact {
+      width: 100% !important;
+    }
   }
 }

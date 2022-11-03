@@ -235,11 +235,20 @@ ul li a {
 }
 
 .about .container-1 .sub img {
-  width: 100%;
   margin: auto;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
+}
+
+.about .container-1 .sub .image__portrait {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  width: 80%;
+}
+
+.about .container-1 .sub .image__side_image {
+  width: 100%;
 }
 
 .about .container-1 .sub .reveal {
@@ -253,8 +262,8 @@ ul li a {
   margin-top: 5rem;
   -webkit-transform: translate(0%, 0);
           transform: translate(0%, 0);
-  -webkit-animation: slide-right .7s 1.3s ease-in forwards;
-          animation: slide-right .7s 1.3s ease-in forwards;
+  -webkit-animation: slide-right 0.7s 1.3s ease-in forwards;
+          animation: slide-right 0.7s 1.3s ease-in forwards;
 }
 
 .about .eye-container {
@@ -322,8 +331,8 @@ ul li a {
 .gallery .image-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 0rem;
-      grid-template-columns: 1fr 1fr 1fr 1fr 0rem;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: auto;
   gap: 0.5rem;
   -webkit-box-align: center;
@@ -531,6 +540,16 @@ ul li a {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .two-side, .sub {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .two-side .contact, .sub .contact {
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

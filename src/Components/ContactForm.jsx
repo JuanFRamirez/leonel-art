@@ -4,6 +4,10 @@ import Swal from "sweetalert2";
 import Subtitle from "./Subtitle";
 import axios from "axios";
 const ContactForm = () => {
+  const serverURL =
+    process.env.NODE_ENV === "development"
+      ? process.env.REACT_APP_LOCAL_URL
+      : process.env.REACT_APP_SERVER_URL;
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -17,15 +21,15 @@ const ContactForm = () => {
     if (validateEmail(form.email) !== null) {
       setError(false);
       try {
-         axios.post("http://localhost:5000/contacts", form).then((res) => {
+        axios.post(`${serverURL}/contacts`, form).then((res) => {
           if (res.data) {
             Swal.fire({
               icon: "success",
               title: "Mensaje enviado",
               text: "Su mensaje ha sido enviado, gracias",
             });
-            console.log(res.data)
-            return res
+            console.log(res.data);
+            return res;
           }
         });
       } catch (e) {

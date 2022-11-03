@@ -26,15 +26,20 @@ const About = () => {
             children={
               <>
                 <img
-                  src="../imgs/old2.jpg"
-                  alt="hand drawn old man face on a gray scale"
+                  src="../imgs/leonel_emilio.jpeg"
+                  alt="portrait of the artist"
+                  className="image image__portrait"
                 />
                 <div className="reveal"></div>
               </>
             }
           />
           <div style={{ position: "relative", overflow: "hidden" }}>
-            <img src="../imgs/house.jpg" alt="house drawn using pointillism" />
+            <img
+              src="../imgs/leonel_emilio_drawn.jpg"
+              alt="self portrait drawn using pointillism"
+              className="image image__side_image"
+            />
             <Subtitle text={"Lorem Ipsum"} />
             <BgText text={"ARTE"} top={"20"} right={"0"} />
           </div>
