@@ -22,7 +22,7 @@ const ContactForm = () => {
       setError(false);
       try {
         axios.post(`${serverURL}/contacts`, form).then((res) => {
-          if (res.data) {
+          if (res.data && res.data.status === 200) {
             Swal.fire({
               icon: "success",
               title: "Mensaje enviado",
