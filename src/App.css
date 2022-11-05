@@ -6,6 +6,21 @@ body {
           box-sizing: border-box;
 }
 
+a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+
 .menu {
   margin-top: 0.5rem;
 }
@@ -475,6 +490,39 @@ ul li a {
   padding: 2rem;
 }
 
+.button--primary {
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  -webkit-transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+}
+
+.button--primary:hover {
+  background-color: transparent;
+  color: #fff;
+  border: solid #fff 0.1rem;
+}
+
+.button--secondary {
+  padding: 1rem;
+  background-color: transparent;
+  color: #fff;
+  border: solid #fff 0.1rem;
+  font-weight: 600;
+  -webkit-transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+}
+
+.button--secondary:hover {
+  background-color: gray;
+  color: #fff;
+  border: solid 0px transparent;
+}
+
 @-webkit-keyframes blink {
   6%,
   100% {
@@ -544,11 +592,13 @@ ul li a {
 }
 
 @media screen and (max-width: 900px) {
-  .two-side, .sub {
+  .two-side,
+  .sub {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .two-side .contact, .sub .contact {
+  .two-side .contact,
+  .sub .contact {
     width: 100% !important;
   }
 }

@@ -4,6 +4,15 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  width: fit-content;
+  display: block;
+}
+.flex {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
 .menu {
   margin-top: 0.5rem;
 }
@@ -325,6 +334,34 @@ ul {
     }
   }
 }
+.button--primary {
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+    border: solid #fff 0.1rem;
+  }
+}
+
+.button--secondary {
+  padding: 1rem;
+  background-color: transparent;
+  color: #fff;
+  border: solid #fff 0.1rem;
+  font-weight: 600;
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: gray;
+    color: #fff;
+    border: solid 0px transparent;
+  }
+}
 
 @keyframes blink {
   6%,
@@ -357,7 +394,8 @@ ul {
 }
 
 @media screen and (max-width: 900px) {
-  .two-side,.sub {
+  .two-side,
+  .sub {
     flex-wrap: wrap;
     .contact {
       width: 100% !important;
