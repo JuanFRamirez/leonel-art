@@ -5,7 +5,7 @@ const Menu = ({ items }) => {
     <div className="menu">
       <div className="logo">
         <Link to={"/"}>
-          <img src="../imgs/icons/leone_emilio_icon.ico"></img>
+          <img src="../imgs/icons/leone_emilio_icon.ico" alt="site icon drawn portrait"></img>
         </Link>
       </div>
       <ul>
