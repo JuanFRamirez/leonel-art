@@ -4,6 +4,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 100vh;
 }
 
 a {
@@ -22,7 +23,26 @@ a {
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 0.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .logo {
+  margin-left: 2rem;
+}
+
+.menu .logo img {
+  width: 40px;
+  border-radius: 50%;
+  margin: auto;
 }
 
 .mn {
@@ -37,7 +57,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
 }
 
 .mn .rotating-logo {
@@ -93,7 +112,7 @@ a {
   position: relative;
 }
 
-.eye-socket .menu {
+.eye-socket .menu__eye {
   position: absolute;
   color: #fff;
   font-size: 2rem;
@@ -113,9 +132,10 @@ a {
           filter: drop-shadow(0px 0px 0px transparent);
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
+  margin-top: 0.5rem;
 }
 
-.eye-socket .menu:hover {
+.eye-socket .menu__eye:hover {
   color: red;
   -webkit-filter: drop-shadow(-1px -4px 1px red);
           filter: drop-shadow(-1px -4px 1px red);
@@ -175,6 +195,18 @@ a {
 
 .value-container .value-text {
   font-size: 1.2rem;
+}
+
+.value-container svg {
+  -webkit-transition: -webkit-transform ease-in 0.2s;
+  transition: -webkit-transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
+}
+
+.value-container svg:hover {
+  cursor: pointer;
+  scale: 1.1;
 }
 
 .loading-screen {
@@ -600,6 +632,15 @@ ul li a {
   .two-side .contact,
   .sub .contact {
     width: 100% !important;
+  }
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  .rotating-logo {
+    width: 100px !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

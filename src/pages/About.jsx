@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="about">
       <div className="container-1">
-        <BigTitle title={"About"} />
+        <BigTitle title={"Sobre mí"} />
         <div className="sub">
           <Widget
             styleClass={

@@ -23,7 +23,7 @@ function App() {
           items={[
             { link: "/", text: "Inicio" },
             { link: "about", text: "Acerca de" },
-            { link: "gallery", text: "Galeria" },
+            { link: "gallery", text: "Galería" },
             { link: "contact", text: "Contacto" },
           ]}
         />

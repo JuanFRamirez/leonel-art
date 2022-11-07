@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 a {
   width: fit-content;
@@ -14,7 +15,18 @@ a {
   margin: 2rem;
 }
 .menu {
+  display: flex;
   margin-top: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    margin-left: 2rem;
+    img {
+      width: 40px;
+      border-radius: 50%;
+      margin: auto;
+    }
+  }
 }
 .mn {
   background-image: url("../public/imgs/main-image.jpg");
@@ -23,7 +35,6 @@ a {
   background-position: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   .rotating-logo {
     width: 200px;
     position: absolute;
@@ -63,7 +74,7 @@ a {
   border-radius: 50%;
   position: relative;
 
-  .menu {
+  .menu__eye {
     position: absolute;
     color: #fff;
     font-size: 2rem;
@@ -76,6 +87,7 @@ a {
     user-select: none;
     filter: drop-shadow(0px 0px 0px transparent);
     transition: all ease-in-out 0.2s;
+    margin-top: 0.5rem;
 
     &:hover {
       color: red;
@@ -125,6 +137,13 @@ a {
   margin: 3rem;
   .value-text {
     font-size: 1.2rem;
+  }
+  svg {
+    transition: transform ease-in 0.2s;
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
   }
 }
 .loading-screen {
@@ -393,6 +412,10 @@ ul {
   }
 }
 
+@media screen and (min-width: 901px) {
+ 
+}
+
 @media screen and (max-width: 900px) {
   .two-side,
   .sub {
@@ -400,5 +423,14 @@ ul {
     .contact {
       width: 100% !important;
     }
+  }
+  h1{
+    font-size: 3rem !important;
+  }
+  h2{
+    font-size: 1.5rem !important;
+  }
+  .rotating-logo {
+    width: 100px !important;
   }
 }

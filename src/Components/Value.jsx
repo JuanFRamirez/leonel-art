@@ -1,12 +1,24 @@
 import React from "react";
-import { BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
+import { BsInstagram, BsFacebook } from "react-icons/bs";
 const Value = ({ text, styleClass }) => {
+  const changeURL = (param) => {
+    window.open(param);
+  };
   return (
     <div className="value-container">
       <p className={styleClass}>{text}</p>
-      <BsInstagram />
-      <BsFacebook />
-      <BsTwitter />
+      <BsInstagram
+        onClick={() =>
+          changeURL(
+            "https://www.instagram.com/leonelemilioart/?igshid=1plq2carr1u6n"
+          )
+        }
+      />
+      <BsFacebook
+        onClick={() =>
+          changeURL("https://www.facebook.com/leonelemilio.ramirezroa")
+        }
+      />
     </div>
   );
 };

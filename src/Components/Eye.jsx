@@ -21,7 +21,7 @@ const Eye = () => {
   return (
     <div className="eye-socket">
       {menu?.map((item, index) => (
-        <li className="menu" key={index} style={{ "--i": index }}>
+        <li className="menu__eye" key={index} style={{ "--i": index }}>
           {item.title}
         </li>
       ))}
