@@ -2,7 +2,6 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const MovilMenu = (menu) => {
-  console.log(menu.menu, menu.length);
   const [activeMenu, setActiveMenu] = useState(false);
   return (
     <div>
