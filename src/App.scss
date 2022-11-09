@@ -147,7 +147,6 @@ a {
   }
 }
 .loading-screen {
-  //background: url("../public/imgs/chess.jpg");
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
@@ -392,7 +391,6 @@ ul {
     height: 0rem;
   }
 }
-
 @keyframes slide-right {
   0% {
     transform: translate(0%, 0%);
@@ -411,12 +409,26 @@ ul {
     transform: rotate(360deg);
   }
 }
+@keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
 
 @media screen and (min-width: 901px) {
  
 }
 
 @media screen and (max-width: 900px) {
+  body{
+    overflow-x: hidden;
+  }
+  img{
+    max-width: 80%;
+  }
   .two-side,
   .sub {
     flex-wrap: wrap;
@@ -432,5 +444,45 @@ ul {
   }
   .rotating-logo {
     width: 100px !important;
+  }
+  .movil-menu{
+    position: absolute;
+    z-index: 999;
+    color: red;
+    left: 90%;
+    top: 5%;
+  }
+  .movil-menu-items{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 888;
+    transition: translation ease-in .3s;
+    a{
+      color: #000 !important;
+    }
+  }
+  .translatedX{
+    animation: enterRight ease-in .3s forwards ;
+    transition: all .3s ease-in ;
+  }
+  .loading-screen {
+    h1 {
+      color: #fff;
+      font-size: smaller !important;
+      text-align: center;
+    }
+    img {
+      width: 200px;
+    }
   }
 }

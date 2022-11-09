@@ -623,7 +623,31 @@ ul li a {
   }
 }
 
+@-webkit-keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes enterRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
 @media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 80%;
+  }
   .two-side,
   .sub {
     -ms-flex-wrap: wrap;
@@ -641,6 +665,56 @@ ul li a {
   }
   .rotating-logo {
     width: 100px !important;
+  }
+  .movil-menu {
+    position: absolute;
+    z-index: 999;
+    color: red;
+    left: 90%;
+    top: 5%;
+  }
+  .movil-menu-items {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 888;
+    -webkit-transition: translation ease-in .3s;
+    transition: translation ease-in .3s;
+  }
+  .movil-menu-items a {
+    color: #000 !important;
+  }
+  .translatedX {
+    -webkit-animation: enterRight ease-in .3s forwards;
+            animation: enterRight ease-in .3s forwards;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  .loading-screen h1 {
+    color: #fff;
+    font-size: smaller !important;
+    text-align: center;
+  }
+  .loading-screen img {
+    width: 200px;
   }
 }
 /*# sourceMappingURL=App.css.map */
