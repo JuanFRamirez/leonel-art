@@ -1,6 +1,6 @@
 import React from "react";
 import { Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu";
 import Loader from "./Components/Loader";
 import "./App.css";
@@ -18,7 +18,7 @@ const Contacts = React.lazy(() => import("./pages/Contacts"));
 function App() {
   return (
     <Suspense fallback={<Loader />}>
-      <BrowserRouter>
+      <HashRouter>
         <Menu
           items={[
             { link: "/", text: "Inicio" },
@@ -34,7 +34,7 @@ function App() {
           <Route path="/contact" element={<Contacts />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Suspense>
   );
 }

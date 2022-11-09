@@ -17,7 +17,7 @@ const ContactForm = () => {
     if (validateEmail(form.email) !== null) {
       setError(false);
       try {
-        axios.post("/contacts", form).then((res) => {
+        axios.post("/sendEmail", form).then((res) => {
           if (res.data && res.data.status === 200) {
             Swal.fire({
               icon: "success",
@@ -61,9 +61,9 @@ const ContactForm = () => {
     <div className="contact">
       <Subtitle text={"Envia un mensaje"} />
       <form onSubmit={submitHandler}>
-        nombre:
+        <label>Nombre:</label>
         <input type="text" name="name" onChange={formHandler} required={true} />
-        email:
+        <label>Email:</label>
         <input
           type="email"
           name="email"
@@ -71,7 +71,7 @@ const ContactForm = () => {
           required={true}
           className={error ? "error" : ""}
         />
-        message:
+        <label>Mensaje:</label>
         <textarea name="message" onChange={formHandler} required={true} />
         <button disabled={isDisabled}>Enviar</button>
       </form>

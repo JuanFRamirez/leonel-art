@@ -329,7 +329,7 @@ ul {
         label {
           color: #fff;
           margin-bottom: 0.5rem;
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
         input {
           padding: 1rem;
@@ -343,6 +343,7 @@ ul {
           border: none;
           border-radius: 1rem;
           max-width: 100%;
+          font-family: inherit;
         }
         button {
           margin-top: 2rem;
@@ -412,9 +413,11 @@ ul {
 @keyframes enterRight {
   from {
     left: 100%;
+    display: none;
   }
   to {
     left: 0;
+    display: flex;
   }
 }
 
