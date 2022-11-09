@@ -17,7 +17,7 @@ const ContactForm = () => {
     if (validateEmail(form.email) !== null) {
       setError(false);
       try {
-        axios.post("/sendEmail", form).then((res) => {
+        axios.post("https://leonel-portfolio-backend.onrender.com/sendEmail", form).then((res) => {
           if (res.data && res.data.status === 200) {
             Swal.fire({
               icon: "success",
