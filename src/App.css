@@ -627,25 +627,18 @@ ul li a {
 @-webkit-keyframes enterRight {
   from {
     left: 100%;
-    display: none;
   }
   to {
     left: 0;
-    display: -webkit-box;
-    display: flex;
   }
 }
 
 @keyframes enterRight {
   from {
     left: 100%;
-    display: none;
   }
   to {
     left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -684,9 +677,7 @@ ul li a {
   .movil-menu-items {
     width: 100vw;
     height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -715,6 +706,9 @@ ul li a {
             animation: enterRight ease-in .3s forwards;
     -webkit-transition: all .3s ease-in;
     transition: all .3s ease-in;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .loading-screen h1 {
     color: #fff;

@@ -413,11 +413,9 @@ ul {
 @keyframes enterRight {
   from {
     left: 100%;
-    display: none;
   }
   to {
     left: 0;
-    display: flex;
   }
 }
 
@@ -458,7 +456,7 @@ ul {
   .movil-menu-items{
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #fff;
     padding: 0;
@@ -477,6 +475,7 @@ ul {
   .translatedX{
     animation: enterRight ease-in .3s forwards ;
     transition: all .3s ease-in ;
+    display: flex !important;
   }
   .loading-screen {
     h1 {
