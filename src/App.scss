@@ -41,6 +41,7 @@ a {
     bottom: 10%;
     right: 5%;
     animation: rotation 6s linear infinite;
+    z-index: 0;
   }
 }
 .intro-title {
@@ -140,6 +141,7 @@ a {
   }
   svg {
     transition: transform ease-in 0.2s;
+    z-index: 2;
     &:hover {
       cursor: pointer;
       scale: 1.1;
