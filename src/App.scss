@@ -35,6 +35,8 @@ a {
   background-position: center;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
   .rotating-logo {
     width: 200px;
     position: absolute;
