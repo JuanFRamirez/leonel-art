@@ -11,7 +11,7 @@ const Contacts = () => {
       <BigTitle title={"Contactos"} />
       <AnimatedText
         text={
-          "Eu nisi magna anim commodo do exercitation aliquip. Aliqua dolor essecillum do ullamco consectetur reprehenderit id do amet nisi do. Estvelit ad magna id cupidatat deserunt laborum dolore consectetur occaecatveniam ad amet eu. Mollit ut fugiat eu magna commodo voluptate amet voluptate amet labore velit. Velit commodo pariatur consectetur esse."
+          "Para comunicarte conmigo y expresarme tus ideas para proyectos artísticos, cotizaciones, colaboraciones o cualquier actividad de índole artística aquí te dejo mis diferentes redes sociales"
         }
       />
       <TwoSideLayout

@@ -12,11 +12,13 @@ const Loader = () => {
   };
   return (
     <div className="loading-screen">
-      <img
-        src={image ? `../imgs/${image}` : "../imgs/ant_eater.jpg"}
-        className="animate__animated animate__fadeIn"
-        alt={`${image}`}
-      />
+      {image && (
+        <img
+          src={`../imgs/${image}`}
+          className="animate__animated animate__fadeIn"
+          alt={`${image}`}
+        />
+      )}
       <h1>Cargando...</h1>
     </div>
   );

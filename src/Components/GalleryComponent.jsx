@@ -2,11 +2,23 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsDoorOpen } from "react-icons/bs";
 import { useGallery } from "../hooks/useGallery";
+import Masonry from "react-masonry-css";
 const GalleryComponent = () => {
   const [popUp, setPopup] = useState("");
   const images = useGallery();
+  const breakPointObj = {
+    default: 4,
+    3000: 6,
+    2000: 5,
+    1200: 3,
+    1000: 2,
+    500: 1,
+  };
   return (
-    <div className="image-container">
+    <Masonry
+      breakpointCols={breakPointObj}
+      style={{ display: "flex", padding: "2rem", gap: "1rem" }}
+    >
       {images && images.length > 0
         ? images.map((image, index) => (
             <LazyLoadImage
@@ -14,8 +26,7 @@ const GalleryComponent = () => {
               src={`../imgs/${image}`}
               alt={`${image}`}
               effect="opacity"
-              width={"93%"}
-              height={"93%"}
+              width={"100%"}
               onClick={() => setPopup(image)}
             />
           ))
@@ -33,7 +44,7 @@ const GalleryComponent = () => {
       ) : (
         ""
       )}
-    </div>
+    </Masonry>
   );
 };
 

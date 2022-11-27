@@ -7,6 +7,11 @@ body {
   min-height: 100vh;
 }
 
+.wrapper {
+  max-width: 1800px;
+  margin: auto;
+}
+
 a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -701,17 +706,17 @@ ul li a {
     left: 100%;
     top: 0;
     z-index: 888;
-    -webkit-transition: translation ease-in .3s;
-    transition: translation ease-in .3s;
+    -webkit-transition: translation ease-in 0.3s;
+    transition: translation ease-in 0.3s;
   }
   .movil-menu-items a {
     color: #000 !important;
   }
   .translatedX {
-    -webkit-animation: enterRight ease-in .3s forwards;
-            animation: enterRight ease-in .3s forwards;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    -webkit-animation: enterRight ease-in 0.3s forwards;
+            animation: enterRight ease-in 0.3s forwards;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -723,6 +728,15 @@ ul li a {
   }
   .loading-screen img {
     width: 200px;
+  }
+  .about .container-1 .sub img {
+    min-height: 500px;
+  }
+  .about .container-1 .sub .reveal {
+    display: none !important;
+  }
+  .about .eye {
+    display: none;
   }
 }
 /*# sourceMappingURL=App.css.map */

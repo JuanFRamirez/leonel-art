@@ -17,25 +17,27 @@ const Contacts = React.lazy(() => import("./pages/Contacts"));
 
 function App() {
   return (
-    <Suspense fallback={<Loader />}>
-      <HashRouter>
-        <Menu
-          items={[
-            { link: "/", text: "Inicio" },
-            { link: "about", text: "Acerca de" },
-            { link: "gallery", text: "Galería" },
-            { link: "contact", text: "Contacto" },
-          ]}
-        />
-        <Routes>
-          <Route path="/" element={<MainPageContainer />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contacts />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </HashRouter>
-    </Suspense>
+    <div className="wrapper">
+      <Suspense fallback={<Loader />}>
+        <HashRouter>
+          <Menu
+            items={[
+              { link: "/", text: "Inicio" },
+              { link: "about", text: "Acerca de" },
+              { link: "gallery", text: "Galería" },
+              { link: "contact", text: "Contacto" },
+            ]}
+          />
+          <Routes>
+            <Route path="/" element={<MainPageContainer />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contacts />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </HashRouter>
+      </Suspense>
+    </div>
   );
 }
 

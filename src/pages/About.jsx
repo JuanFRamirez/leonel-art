@@ -21,7 +21,7 @@ const About = () => {
               "about-page-w animate__animated animate__fadeInUp animate__delay-2.2s"
             }
             text={
-              "Enim tempor esse aute elit adipisicing deserunt consectetur excepteur amet voluptate duis pariatur. Proident adipisicing proident officia sint duis. Do ipsum nisi velit qui laborum non sint velit dolor. Culpa dolor dolore aliqua in amet quis nulla velit. Sit voluptate eu sint Lorem non commodo."
+              "Soy Leonel Emilio Ramirez, artista visual, Publicista y diseñador gráfico con más de 7 años de experiencia en el campo de las artes. Soy egresado del centro educativo (modalidad en artes visuales) Manuel del Cabral fe y Alegría.  Ganador de concursos como son: expresiones en papel en su 6ta, 7ma y 8va edicion y arte en cuarentena, organizado por la facultad de artes de la Universidad autónoma de santo domingo (UASD). Manejo una gran variedad de técnicas ilustrativas secas y humedas que me permiten crear de manera satisfactoria lo que el cliente necesite."
             }
             children={
               <>
@@ -40,14 +40,14 @@ const About = () => {
               alt="self portrait drawn using pointillism"
               className="image image__side_image"
             />
-            <Subtitle text={"Lorem Ipsum"} />
+            <Subtitle text={"Leonel-art"} />
             <BgText text={"ARTE"} top={"20"} right={"0"} />
           </div>
         </div>
       </div>
       <div className="container-2">
         <div>
-          <Subtitle text="Lorem Ipsum" />
+          <Subtitle text="Hagamos arte" />
         </div>
         <div className="eye-container">
           <Eye />
